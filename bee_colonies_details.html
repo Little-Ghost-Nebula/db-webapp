@@ -7,10 +7,37 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <header>
-
+    <h1>Details</h1>
 </header>
 <body>
-    
+
+    <!-- Pop-Up Form Button-->
+    <button class="add-button" onclick="openForm()">Add</button>
+
+    <!-- Pop-Up Form -->
+    <div class="form-popup" id="colonyForm">
+        <form action="" class="colony-container"> <!-- action muss noch per php datei festgelegt werden! -->
+            <h1>Füge ein Bienenvolk hinzu.</h1>
+
+            <input class="input-field" type="text" placeholder="Bienenvolk Bezeichnung" name="colony_name">
+            <input class="input-field" type="text" placeholder="Standort" name="location">
+            <input class="input-field" type="text" placeholder="Königin Bezeichnung" name="queen">
+            <input class="input-field" type="number" placeholder="Note" name="grade">
+
+            <button type="submit" class="submit-btn">Hinzufügen</button>
+            <button type="button" class="cancle-btn" onclick="closeForm()">Schließen</button>
+        </form>
+    </div>
+
+    <script>
+        function openForm() {
+          document.getElementById("colonyForm").style.display = "block";
+        }
+        
+        function closeForm() {
+          document.getElementById("colonyForm").style.display = "none";
+        }
+    </script>
 </body>
 <footer>
     
